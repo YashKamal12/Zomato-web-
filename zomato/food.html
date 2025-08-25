@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <style>
+            main{
+                display:grid;
+                grid-template-rows:30px 500px 30px 500px 30px 500px 30px 500px  30px 500px;
+                grid-template-columns:70% 30%;
+                grid-row-gap:20px;
+            }
+            #s1{
+                grid-row:1/3;
+                grid-column:1/3;
+            }
+            #s2{
+                grid-row:3/5;
+                grid-column:1/3;
+            }
+            #s3{
+                grid-row:5/7;
+                grid-column:1/3;
+            }
+            #s4{
+                grid-row:7/9;
+                grid-column:1/3;
+            }
+            #s5{
+                grid-row:9/11;
+                grid-column:1/3;
+            }
+            #n1{
+                grid-row:1/2;
+                grid-column:1/2;
+                font-size: 30px;
+            }
+            #i1{
+                grid-row:2/3;
+                grid-column:1/2;
+            }
+            #a1{
+                grid-row:2/3;
+                grid-column:2/3;
+                margin-top:2px;
+                font-size:20px;
+            }
+            #n2{
+                grid-row:3/4;
+                grid-column:1/2;
+                font-size: 30px;
+            }
+            #i2{
+                grid-row:4/5;
+                grid-column:1/2;
+            }
+            #a2{
+                grid-row:4/5;
+                grid-column:2/3;
+                margin-top:2px;
+                font-size:20px;
+            }
+            #n3{
+                grid-row:5/6;
+                grid-column:1/2;
+                font-size: 30px;
+            }
+            #i3{
+                grid-row:6/7;
+                grid-column:1/2;
+            }
+            #a3{
+                grid-row:6/7;
+                grid-column:2/3;
+                margin-top:2px;
+                font-size:20px;
+            }
+            #n4{
+                grid-row:7/8;
+                grid-column:1/2;
+                font-size: 30px;
+            }
+            #i4{
+                grid-row:8/9;
+                grid-column:1/2;
+            }
+            #a4{
+                grid-row:8/9;
+                grid-column:2/3;
+                margin-top:2px;
+                font-size:20px;
+            }
+            #n5{
+                grid-row:9/10;
+                grid-column:1/2;
+                font-size: 30px;
+            }
+            #i2{
+                grid-row:10/11;
+                grid-column:1/2;
+            }
+            #a5{
+                grid-row:10/11;
+                grid-column:2/3;
+                margin-top:2px;
+                font-size:20px;
+            }
+        </style>
+        <script>
+            tfood=["panner","dosha","chicken","biryani","Tandoori"]
+            tname = ["blue diamond", "alcor", "ramada", "aashirwad", "samrat"]
+        himg=["b.jpg","a1.jpg","r1.avif","aas1.jpg","s1.jpg"]
+        hadress=["1st Floor, Crystal Square, Kharkai Link Rd, beside Ram Krishna Mission School, Bistupur, Jamshedpur, Jharkhand 831001","Holding No.4, Ramdas Bhatta, New Rani Kudar, Bistupur, Jamshedpur, Jharkhand 831001","Ramdas bhatta holding No 3, Bistupur, Jamshedpur, Jharkhand 831001","J Rd, opposite , of biba store, Bistupur, Jamshedpur, Jharkhand 831001","New Rani Kudar, Bistupur, Jamshedpur, Jharkhand 831005"]
+        function search()
+        {
+            var str = document.getElementById("entery").value
+            for (i = 0; i<5; i++)
+             {
+                    if (str==tfood[i])
+                    {
+                        for(j=0;j<5;j++)
+                        {
+                        document.getElementById("n"+(j+1)).innerHTML = tname[j]
+                        document.getElementById("i"+(j+1)).src=himg[j]
+                        document.getElementById("a"+(j+1)).innerHTML = hadress[j]
+                        }
+                    }
+             }
+        }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="entery"></input>
+        <button onclick="search()">search</button>
+        <main>
+            <div id="s1">
+                <div class="bf1" id="n1"></div>
+                <div ><img id="i1" src="" class="dd1" width="100%" height="500px" ></div>
+                <div class="bp1" id="a1"></div>
+            </div>
+            <div id="s2">
+                <div class="bf2" id="n2"></div>
+                <div ><img id="i2" src="" class="dd2" width="100%" height="500px"></div>
+                <div class="bp2" id="a2"></div>
+            </div>
+            <div id="s3">
+                <div class="bf3" id="n3"></div>
+                <div ><img id="i3" src="" class="dd3" width="100%" height="500px"></div>
+                <div class="bp3" id="a3"></div>
+            </div>
+            <div id="s4">
+                <div class="bf4" id="n4"></div>
+                <div ><img id="i4" src="" class="dd4" width="100%" height="500px"></div>
+                <div class="bp4" id="a4"></div>
+            </div>
+            <div id="s5">
+                <div class="bf5" id="n5"></div>
+                <div ><img id="i5" src="" class="dd5" width="100%" height="500px"></div>
+                <div class="bp5" id="a5"></div>
+            </div>
+        </main>
+    </body>
+</html>

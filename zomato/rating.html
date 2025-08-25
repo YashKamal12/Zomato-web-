@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <style>
+            .starn1{
+                overflow:none;
+                width: 0;
+	            height: 0;
+	            border-left: 60px solid transparent;
+	            border-right: 60px solid transparent;
+	            border-bottom: 120px solid grey;
+                margin-left:100px;
+                margin-top:100px;
+            }
+            .starn2{
+                width: 0;
+	            height: 0;
+	            border-left: 60px solid transparent;
+	            border-right: 60px solid transparent;
+	            border-top: 120px solid grey ;
+                margin-left:100px;
+                margin-top:-80px;
+            }
+            .st2{
+                margin-left:150px;
+                margin-top:-260px;
+                display: block;
+            }
+            .st3{
+                margin-left:300px;
+                margin-top:-260px;  
+                display:block;              
+            }
+            .st4{
+                margin-left:450px;
+                margin-top:-260px;
+                display:block;
+            }
+            .st5{
+                margin-left:600px;
+                margin-top:-260px;
+                display:block;
+            }
+            .str1{
+                margin-top: 100px;
+                margin-left:50px;
+                display:none;
+            }
+            .str2{
+                margin-top: -195px;
+                margin-left:230px;
+                display:none;
+            }
+            .str3{
+                margin-top: -195px;
+                margin-left:390px;
+                display:none;
+            }
+            .str4{
+                margin-top: -195px;
+                margin-left:550px;
+                display:none;
+            }
+            .str5{
+                margin-top: -195px;
+                margin-left:700px;
+                display:none;
+            }
+        </style>
+        <script>
+           function star(n)
+            {
+                for(i=1;i<=n-1;i++)
+                {
+                    window.alert(i)
+                    document.getElementById("stt"+i).style.display="none";
+                    document.getElementById("st"+i).style.display="block";
+                }
+                document.getElementById("start").innerHTML="Thank's For "+(i-1)+" Star Rating"
+            }   
+        </script>
+    </head>
+    <body>
+        <div class="st1" id="stt1" onclick="star(1)">
+            <div class="starn1"></div>
+            <div class="starn2"></div>
+        </div>
+        <div class="st2" id="stt2" onclick="star(2)">
+            <div class="starn1"></div>
+            <div class="starn2"></div>
+        </div>
+        <div class="st3" id="stt3" onclick="star(3)">
+            <div class="starn1"></div>
+            <div class="starn2"></div>
+        </div>
+        <div class="st4" id="stt4" onclick="star(4)">
+            <div class="starn1"></div>
+            <div class="starn2"></div>
+        </div>
+        <div class="st5" id="stt5" onclick="star(5)">
+            <div class="starn1"></div>
+            <div class="starn2"></div>
+        </div>
+        <div class="str1" id="st1">
+            <img src="star2.webp" width="15%" height="200px">
+        </div>
+        <div class="str2" id="st2">
+            <img src="star2.webp" width="15%" height="200px">
+        </div>
+        <div class="str3" id="st3">
+            <img src="star2.webp" width="17%" height="200px">
+        </div>
+        <div class="str4" id="st4">
+            <img src="star2.webp" width="20%" height="200px">
+        </div>
+        <div class="str5" id="st5">
+            <img src="star2.webp" width="25%" height="200px">
+        </div>
+        <label id="start"></label>
+    </body>
+</html>
